@@ -36,7 +36,13 @@ router.post('/', async (req, res) => {
     });
     await user.save();
     const token = await user.generateAuthToken();
-    res.status(201).send({ user, token });
+
+    const userInfo = {
+      name: user.name,
+      email: user.email
+    }
+
+    res.status(201).send({ user: userInfo, token });
   } catch (error) {
     console.log('Catched error');
     res.status(400).send({ error: 'User already exists.' });

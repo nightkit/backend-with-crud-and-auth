@@ -8,7 +8,7 @@ const auth = async (req, res, next) => {
     next();
   } catch (error) {
     res.status(401).send({
-      error: 'You are not logged in?',
+      error: 'Invalid JWT token.',
     });
   }
 };
