@@ -6,6 +6,10 @@
   "repository": "git@github.com:nightkit/backend-with-crud-and-auth.git",
   "author": "Utkarsh Dubey <utkarsh.dubey3jan@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "node app.js",
+    "watch": "nodemon app.js"
+  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
